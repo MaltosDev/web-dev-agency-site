@@ -31,17 +31,6 @@ const Footer = () => (
             <p className="font-normal text-[14px] text-primary-text dark:text-white opacity-50">
               Copyright © 2026 Maltos Web Dev Agency. Tous droits réservés.
             </p>
-
-            <div className="flex gap-4">
-              {socials.map((social) => (
-                <Image
-                  key={social.name}
-                  src={social.url}
-                  alt={social.name}
-                  className="w-[24px] h-[24px] object-contain cursor-pointer"
-                />
-              ))}
-            </div>
           </div>
         </div>
       </div>
