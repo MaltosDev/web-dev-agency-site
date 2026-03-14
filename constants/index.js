@@ -56,7 +56,7 @@ export const newFeatures = [
 export const insights = [
   {
     imgUrl: Planet_6,
-    title: "ARTICLE RANDOM A METTRE",
+    title: "Le futur du Web Design 3D",
     subtitle:
       "ARTICLE RANDOM A METTRE",
   },
