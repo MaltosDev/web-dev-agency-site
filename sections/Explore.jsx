@@ -3,11 +3,20 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
-import { TypingText, ExploreCard, TitleText } from "../components";
+import { TypingText, ExploreCard, TitleText, ProjectModal } from "../components";
 import { exploreWorlds } from "../constants";
 
 const Explore = () => {
   const [activeCard, setActiveCard] = useState("world-2");
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleCardClick = (id) => {
+    const project = exploreWorlds.find((world) => world.id === id);
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
@@ -34,11 +43,18 @@ const Explore = () => {
               {...world}
               index={index}
               active={activeCard}
-              handleClick={setActiveCard}
+              handleHover={setActiveCard}
+              handleClick={handleCardClick}
             />
           ))}
         </div>
       </motion.div>
+
+      <ProjectModal
+        isOpen={showModal}
+        closeModal={() => setShowModal(false)}
+        project={selectedProject}
+      />
     </section>
   );
 };

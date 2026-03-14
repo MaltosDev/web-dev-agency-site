@@ -29,7 +29,7 @@ const Footer = () => (
           <div className="flex items-center justify-between flex-wrap gap-4">
             <h4 className="font-extrabold text-[24px] text-primary-text dark:text-white">Maltos Dev</h4>
             <p className="font-normal text-[14px] text-primary-text dark:text-white opacity-50">
-              Copyright © 2026 Maltos Web Dev Agency. Tous droits réservés.
+              Copyright © 2026 Maltos Dev. Tous droits réservés.
             </p>
 
             <div className="flex gap-4">

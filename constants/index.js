@@ -19,16 +19,26 @@ export const exploreWorlds = [
     id: "world-1",
     imgUrl: Planet_1,
     title: "Floragel",
+    description: "Solution naturelle d'arrosage automatique pour plantes développée avec JA Québec. Le gel Floragel garantit jusqu'à 2 semaines d'autonomie écologique, intégrant un chatbot intelligent pour l'assistance.",
+    stack: ["Bootstrap 5", "LLM", "EmailJS", "JavaScript", "HTML", "CSS"],
+    url: "https://floragel.github.io/floragel-web/"
   },
   {
     id: "world-2",
     imgUrl: Planet_2,
     title: "StanRbotix",
+    description: "Site officiel de l'équipe de robotique FRC StanRbotix 6622. Une plateforme immersive pour suivre l'actualité de l'équipe, ses compétitions FRC, découvrir les innovations techniques et l'engagement de l'équipe.",
+    stack: ["Vue.js", "CSS", "HTML"],
+    url: "https://www.stanrobotix6622.com/"
   },
   {
     id: "world-3",
     imgUrl: Planet_3,
     title: "Trakant",
+    description: "Application mobile de productivité gamifiée développée pour le Hackathon HackDécouverte. Transformez vos habitudes en jeu : chaque action fait grandir votre colonie de fourmis en pixel art.",
+    stack: ["Kotlin", "Jetpack Compose", "Material 3", "LocalStorage"],
+    url: "https://github.com/floragel/Trakant",
+    format: "mobile"
   }
 ];
 
@@ -56,21 +66,21 @@ export const newFeatures = [
 export const insights = [
   {
     imgUrl: Planet_6,
-    title: "ARTICLE RANDOM A METTRE",
+    title: "Pourquoi un design responsive est crucial en 2026",
     subtitle:
-      "ARTICLE RANDOM A METTRE",
+      "Avec plus de 60% du trafic web provenant des mobiles, découvrez comment l'adaptation fluide de votre site impacte directement vos conversions et votre SEO.",
   },
   {
     imgUrl: Planet_7,
-    title: "ARTICLE RANDOM A METTRE",
+    title: "Optimiser les performances de votre site Next.js",
     subtitle:
-      "ARTICLE RANDOM A METTRE",
+      "La vitesse de chargement est le premier critère de rétention. Apprenez les meilleures pratiques pour offrir une expérience instantanée à vos utilisateurs.",
   },
   {
     imgUrl: Planet_8,
-    title: "ARTICLE RANDOM A METTRE",
+    title: "L'importance de l'accessibilité web moderne",
     subtitle:
-      "ARTICLE RANDOM A METTRE",
+      "Rendre votre site accessible à tous n'est plus une option. Découvrez comment un design inclusif améliore l'expérience globale et la portée de votre marque.",
   },
 ];
 
@@ -193,7 +203,7 @@ export const faqs = [
   },
   {
     question: "Proposez-vous un service de maintenance après la livraison ?",
-    answer: "Oui ! Nous offrons un forfait Service Après-Vente à 1200$/an qui inclut la maintenance continue, les mises à jour de sécurité, le support technique prioritaire et un monitoring 24/7 pour assurer la pérennité de votre site."
+    answer: "Oui ! Nous offrons un forfait Service Après-Vente à 300$/an qui inclut la maintenance continue, les mises à jour de sécurité, le support technique prioritaire et un monitoring 24/7 pour assurer la pérennité de votre site."
   }
 ];
 

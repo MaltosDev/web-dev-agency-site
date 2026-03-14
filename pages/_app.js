@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 
+import SmoothScroll from "../components/SmoothScroll";
+
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => (
@@ -17,7 +19,9 @@ const MyApp = ({ Component, pageProps }) => (
       />
     </Head>
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <Component {...pageProps} />
+      <SmoothScroll>
+        <Component {...pageProps} />
+      </SmoothScroll>
     </ThemeProvider>
   </>
 );
