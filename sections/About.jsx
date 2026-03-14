@@ -5,7 +5,7 @@ import styles from "../styles";
 import { fadeIn, staggerContainer } from "../utils/motion";
 
 const About = () => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section className={`${styles.paddings} relative z-10`} id="about">
     <div className="gradient-02 z-0" />
     <motion.div
       variants={staggerContainer}
@@ -14,25 +14,27 @@ const About = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
-      <TypingText title="| About Us" textStyles="text-center" />
+      <TypingText title="| Qui sommes-nous" textStyles="text-center" />
 
       <motion.p
         variants={fadeIn("up", "tween", 0.2, 1)}
         className="mt-[10px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white "
       >
-        <span className="font-extrabold text-white">We are</span> a passionate
-        team dedicated to helping small businesses succeed online. We build
-        websites that don't just look good, but also drive results. Whether
-        you need a simple layout or a complex{" "}
+        <span className="font-extrabold text-white">Nous sommes</span> une
+        équipe passionnée dédiée à aider les petites entreprises à réussir en
+        ligne. Nous créons des sites web qui ne sont pas seulement beaux, mais
+        qui génèrent aussi des résultats concrets. Que vous ayez besoin d'un
+        simple site vitrine ou d'une{" "}
         <span className="font-extrabold text-white">
           {" "}
-          custom web application{" "}
-        </span>{", "}
-        our tailored solutions are designed to{" "}
-        <span className="font-extrabold text-white"> accelerate </span> your
-        growth and turn visitors into loyal customers. Let's{" "}
-        <span className="font-extrabold text-white">explore</span> how we can
-        bring your vision to life by scrolling down.
+          application web sur mesure{" "}
+        </span>
+        {", "}
+        nos solutions personnalisées sont conçues pour{" "}
+        <span className="font-extrabold text-white"> accélérer </span> votre
+        croissance et transformer vos visiteurs en clients fidèles.{" "}
+        <span className="font-extrabold text-white">Découvrez</span> comment
+        nous pouvons donner vie à votre vision.
       </motion.p>
 
       <motion.img

@@ -16,19 +16,19 @@ const World = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
-      <TypingText title="| Trusted Globally " textStyles="text-center" />
+      <TypingText title="| Présence Mondiale " textStyles="text-center" />
       <TitleText
         title={
           <>
-            We have helped small businesses all around the world to achieve
-            their digital goals
+            Nous avons aidé des petites entreprises dans le monde entier à
+            atteindre leurs objectifs numériques
           </>
         }
         textStyles="text-center"
       />
 
       <motion.div
-        variants={fadeIn("up", "easeIn", "0.3", 1)}
+        variants={fadeIn("up", "easeIn", 0.3, 1)}
         className="relative mt-[68px] flex w-full lg:h-[550px] md:h-[360px] h-[170px]"
       >
         <Image src={fullmap} alt="map" className="w-full h-full object-cover" />

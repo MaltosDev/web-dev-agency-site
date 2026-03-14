@@ -1,6 +1,6 @@
 const Head = () => (
   <>
-    <title>Modern Web Dev Agency</title>
+    <title>Agence Web Moderne | Sites Web pour PME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" />
   </>

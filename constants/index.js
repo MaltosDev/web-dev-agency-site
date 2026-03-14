@@ -17,69 +17,69 @@ export const exploreWorlds = [
   {
     id: "world-1",
     imgUrl: Planet_1,
-    title: "Custom Web Design",
+    title: "Design Web Sur Mesure",
   },
   {
     id: "world-2",
     imgUrl: Planet_2,
-    title: "E-Commerce Solutions",
+    title: "Solutions E-Commerce",
   },
   {
     id: "world-3",
     imgUrl: Planet_3,
-    title: "SEO Optimization",
+    title: "Optimisation SEO",
   },
   {
     id: "world-4",
     imgUrl: Planet_4,
-    title: "CMS Integration",
+    title: "Intégration CMS",
   },
   {
     id: "world-5",
     imgUrl: Planet_5,
-    title: "Web App Development",
+    title: "Applications Web",
   },
 ];
 
 export const startingFeatures = [
-  "Schedule a free discovery call to discuss your business goals",
-  "We design and develop a tailored strategy for your brand",
-  "Launch your modern, fast website and start converting visitors",
+  "Planifiez un appel découverte gratuit pour discuter de vos objectifs",
+  "Nous concevons et développons une stratégie adaptée à votre marque",
+  "Lancez votre site moderne et commencez à convertir vos visiteurs",
 ];
 
 export const newFeatures = [
   {
     imgUrl: vrpano,
-    title: "Blazing Fast",
+    title: "Ultra Rapide",
     subtitle:
-      "Our websites are optimized for speed, ensuring high performance and better user experience.",
+      "Nos sites sont optimisés pour la vitesse, garantissant haute performance et meilleure expérience utilisateur.",
   },
   {
     imgUrl: headset,
     title: "Mobile-First",
     subtitle:
-      "Fully responsive designs that look beautiful and work perfectly on any device, anywhere.",
+      "Des designs entièrement responsifs qui s'affichent parfaitement sur tous les appareils.",
   },
 ];
 
 export const insights = [
   {
     imgUrl: Planet_6,
-    title: "How a redesign increased customer inquiries by 200%",
+    title: "Comment une refonte a augmenté les demandes clients de 200%",
     subtitle:
-      "Read our case study on how we transformed a local bakery's online presence and drove massive sales growth.",
+      "Découvrez notre étude de cas sur la transformation de la présence en ligne d'une boulangerie locale.",
   },
   {
     imgUrl: Planet_7,
-    title: "5 crucial SEO tips every small business needs to know",
+    title: "5 conseils SEO essentiels pour les petites entreprises",
     subtitle:
-      "Boost your search rankings with our straightforward guide to dominating local search results.",
+      "Boostez votre classement dans les moteurs de recherche avec notre guide pratique.",
   },
   {
     imgUrl: Planet_8,
-    title: "Why your business needs a modern Web App in 2024",
+    title: "Pourquoi votre entreprise a besoin d'une application web moderne",
     subtitle:
-      "Discover the benefits of custom web applications for streamlining operations and engaging with customers.",
+      "Découvrez les avantages des applications web sur mesure pour optimiser vos opérations.",
   },
 ];
 

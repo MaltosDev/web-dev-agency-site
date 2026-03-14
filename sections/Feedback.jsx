@@ -24,16 +24,16 @@ const Feedback = () => (
 
         <div>
           <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
-            Sarah Jenkins
+            Marie Dupont
           </h4>
           <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
-            Small Business Owner
+            Propriétaire d'un commerce local
           </p>
         </div>
         <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-          “Working with this agency was the best decision for my business. The
-          new website they built us is fast, beautiful, and easily doubled our
-          online sales in just three months.”
+          « Travailler avec cette agence a été la meilleure décision pour mon
+          entreprise. Le nouveau site qu'ils nous ont créé est rapide, élégant,
+          et a doublé nos ventes en ligne en seulement trois mois. »
         </p>
       </motion.div>
 

@@ -9,6 +9,7 @@ import headset from "../public/headset.svg";
 
 const Footer = () => (
   <motion.footer
+    id="footer"
     variants={footerVariants}
     initial="hidden"
     whileInView="show"
@@ -18,7 +19,7 @@ const Footer = () => (
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex items-center justify-between flex-wrap gap-5">
         <h4 className="font-bold md:text-[64px] text-[44px] text-white">
-          Grow Your Business
+          Développez Votre Activité
         </h4>
         <button
           type="button"
@@ -30,7 +31,7 @@ const Footer = () => (
             className="w-[24px] h-[24px] object-contain"
           />
           <span className="font-normal text-[16px] text-white">
-            Contact Us
+            Contactez-nous
           </span>
         </button>
 
@@ -40,7 +41,7 @@ const Footer = () => (
           <div className="flex items-center justify-between flex-wrap gap-4">
             <h4 className="font-extrabold text-[24px] text-white">WEB AGENCY</h4>
             <p className="font-normal text-[14px] text-white opacity-50">
-              Copyright © 2024 Web Agency. All rights reserved.
+              Copyright © 2024 Web Agency. Tous droits réservés.
             </p>
 
             <div className="flex gap-4">
