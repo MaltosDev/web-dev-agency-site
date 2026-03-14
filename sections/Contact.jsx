@@ -30,8 +30,9 @@ const Contact = () => {
         'service_ueg3kux', // Replaced by user in dashboard
         'template_fxwa4m9', // Replaced by user in dashboard
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          form_name: formData.name,
+          form_email: formData.email,
           subject: formData.subject,
           message: formData.message,
           to_email: 'maltos.can@gmail.com',
