@@ -10,6 +10,7 @@ import Pricing from "./Pricing";
 import Team from "./Team";
 import FAQ from "./FAQ";
 import Contact from "./Contact";
+import Portfolio from "./Portfolio";
 
 export {
   Hero,
@@ -24,4 +25,5 @@ export {
   Team,
   FAQ,
   Contact,
+  Portfolio,
 };

@@ -9,17 +9,48 @@ import { navVariants } from "../utils/motion";
 const navLinks = [
   { name: "À propos", href: "#about" },
   { name: "Services", href: "#explore" },
+  { name: "Réalisations", href: "#portfolio" },
   { name: "Tarifs", href: "#pricing" },
   { name: "Équipe", href: "#team" },
   { name: "FAQ", href: "#faq" },
 ];
+
+const ThemeToggle = ({ theme, setTheme, mounted }) => {
+  if (!mounted) return <div className="w-[56px] h-[28px]" />;
+
+  const isDark = theme === "dark";
+
+  return (
+    <button
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className={`relative w-[56px] h-[28px] rounded-full transition-colors duration-300 flex items-center px-[3px] ${
+        isDark ? "bg-[#25618B]" : "bg-[#d1d5db]"
+      }`}
+      aria-label="Toggle Dark Mode"
+    >
+      {/* Sun icon */}
+      <span className={`absolute left-[6px] text-[12px] transition-opacity duration-200 ${isDark ? "opacity-40" : "opacity-100"}`}>
+        ☀️
+      </span>
+      {/* Moon icon */}
+      <span className={`absolute right-[6px] text-[12px] transition-opacity duration-200 ${isDark ? "opacity-100" : "opacity-40"}`}>
+        🌙
+      </span>
+      {/* Slider */}
+      <motion.div
+        layout
+        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        className={`w-[22px] h-[22px] rounded-full bg-white shadow-md z-10 ${isDark ? "ml-auto" : "mr-auto"}`}
+      />
+    </button>
+  );
+};
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -51,15 +82,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-full focus:outline-none transition-transform hover:scale-110"
-              aria-label="Toggle Dark Mode"
-            >
-              {theme === "dark" ? "☀️" : "🌙"}
-            </button>
-          )}
+          <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
           <a
             href="#contact"
             className="py-2 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[14px] text-white hover:bg-opacity-80 transition-all duration-300"
@@ -97,15 +120,10 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="py-3 px-6 text-2xl"
-              aria-label="Toggle Dark Mode"
-            >
-              {theme === "dark" ? "☀️" : "🌙"}
-            </button>
-          )}
+          <div className="flex items-center gap-3 py-2">
+            <span className="text-[14px] text-secondary-text dark:text-secondary-white">Thème</span>
+            <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
+          </div>
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}

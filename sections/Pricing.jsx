@@ -21,11 +21,21 @@ const Pricing = () => (
         textStyles="text-center"
       />
 
-      <div className="mt-[50px] flex lg:flex-row flex-col gap-[30px] justify-center">
+      <div className="mt-[50px] grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[30px]">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={plan.id} {...plan} index={index} />
         ))}
       </div>
+
+      {/* Maintenance info banner */}
+      <motion.div
+        variants={staggerContainer}
+        className="mt-[40px] p-6 rounded-[24px] border-[1px] border-accent-blue/30 dark:border-dark-accent/30 bg-accent-blue/5 dark:bg-dark-accent/10 text-center"
+      >
+        <p className="text-secondary-text dark:text-secondary-white text-[16px]">
+          💡 <strong className="text-primary-text dark:text-white">Proposé à la fin de chaque contrat</strong> — Notre forfait Service Après-Vente assure la pérennité de votre site avec un maintien continu, des mises à jour de sécurité et un support prioritaire.
+        </p>
+      </motion.div>
     </motion.div>
   </section>
 );

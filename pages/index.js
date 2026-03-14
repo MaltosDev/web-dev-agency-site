@@ -12,6 +12,7 @@ import {
   Team,
   FAQ,
   Contact,
+  Portfolio,
 } from "../sections";
 
 const Home = () => (
@@ -24,23 +25,26 @@ const Home = () => (
       <Team />
     </div>
     <div className="relative">
-      <Explore />
+      <Portfolio />
       <div className="gradient-04 z-0" />
+      <Explore />
+    </div>
+    <div className="relative">
       <GetStarted />
-    </div>
-    <div className="relative">
-      <Pricing />
       <div className="gradient-03 z-0" />
-      <WhatsNew />
+      <Pricing />
     </div>
-
     <div className="relative">
-      <Insights />
+      <WhatsNew />
       <div className="gradient-04 z-0" />
       <FAQ />
     </div>
     <div className="relative">
+      <Insights />
+      <div className="gradient-03 z-0" />
       <Feedback />
+    </div>
+    <div className="relative">
       <div className="gradient-05 z-0" />
       <Contact />
     </div>

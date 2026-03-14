@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import PricingCard from "./PricingCard";
 import TeamMember from "./TeamMember";
 import FaqItem from "./FaqItem";
+import PortfolioCard from "./PortfolioCard";
 
 export {
   Navbar,
@@ -21,4 +22,5 @@ export {
   PricingCard,
   TeamMember,
   FaqItem,
+  PortfolioCard,
 };

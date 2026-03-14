@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 
-const TeamMember = ({ name, role, desc, portfolioUrl, index }) => (
+const TeamMember = ({ name, role, desc, imgUrl, portfolioUrl, index }) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.5, 1)}
     className="flex flex-col items-center p-6 border-[1px] border-[#d1d5db] dark:border-[#6a6a6a] rounded-[32px] flex-1 min-w-[250px] relative z-10 group overflow-hidden"
@@ -20,8 +20,20 @@ const TeamMember = ({ name, role, desc, portfolioUrl, index }) => (
       </a>
     </div>
 
-    {/* Placeholder for an Avatar - A circle gradient for now */}
-    <div className="w-[120px] h-[120px] rounded-full gradient-04 mb-6 relative z-10" />
+    {/* Team member photo */}
+    {imgUrl ? (
+      <div className="w-[120px] h-[120px] rounded-full mb-6 relative z-10 overflow-hidden border-[3px] border-accent-blue/30 dark:border-dark-accent/30">
+        <img
+          src={imgUrl}
+          alt={name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    ) : (
+      <div className="w-[120px] h-[120px] rounded-full gradient-04 mb-6 relative z-10 flex items-center justify-center text-[40px] font-bold text-white">
+        {name.charAt(0)}
+      </div>
+    )}
     
     <h3 className="font-bold text-[24px] text-primary-text dark:text-white mb-2 relative z-10">{name}</h3>
     <h4 className="font-semibold text-[16px] text-accent-blue dark:text-[#25618b] mb-4 uppercase relative z-10">{role}</h4>

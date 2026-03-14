@@ -86,7 +86,7 @@ export const insights = [
 export const pricingPlans = [
   {
     id: "basic",
-    title: "Site regulier",
+    title: "Site Régulier",
     price: "800$",
     features: [
       "Landing Page moderne",
@@ -122,23 +122,63 @@ export const pricingPlans = [
       "Support prioritaire"
     ],
     buttonText: "Contactez-nous"
+  },
+  {
+    id: "maintenance",
+    title: "Service Après-Vente",
+    price: "1200$",
+    features: [
+      "Maintenance continue du site",
+      "Mises à jour de sécurité",
+      "Support technique prioritaire",
+      "Modifications de contenu illimitées",
+      "Monitoring de performance 24/7",
+      "Sauvegardes régulières"
+    ],
+    buttonText: "Souscrire au maintien"
   }
 ];
 
 export const teamMembers = [
   {
     name: "Nayl",
-    role: "TITRE A METTRE",
-    desc: "DESCRIPTION A METTRE",
+    role: "Développeur Frontend",
+    desc: "Passionné par le design interactif et les interfaces modernes. Nayl crée des expériences web fluides et visuellement saisissantes, en combinant créativité artistique et maîtrise technique des dernières technologies frontend.",
+    imgUrl: "/images/nayl.jpg",
     portfolioUrl: "https://www.nayl.ca/",
     linkedinUrl: "#"
   },
   {
     name: "Alban",
-    role: "TITRE A METTRE",
-    desc: "DESCRIPTION A METTRE",
+    role: "Développeur Backend",
+    desc: "Architecte de solutions robustes et scalables. Alban conçoit les fondations techniques de chaque projet, des APIs performantes aux bases de données optimisées, garantissant fiabilité et sécurité à chaque ligne de code.",
+    imgUrl: "/images/alban.jpg",
     portfolioUrl: "https://alban-pixel.github.io/portfolio/",
     linkedinUrl: "#"
+  }
+];
+
+export const portfolioSites = [
+  {
+    id: "floragel",
+    title: "Floragel",
+    desc: "Site vitrine élégant pour une boutique florale, mettant en avant l'univers naturel et raffiné de la marque.",
+    imgUrl: "/images/portfolio-floragel.jpg",
+    url: "#"
+  },
+  {
+    id: "robotix",
+    title: "Site Robotix",
+    desc: "Plateforme dynamique dédiée à la robotique, avec un design futuriste et des animations immersives.",
+    imgUrl: "/images/portfolio-robotix.jpg",
+    url: "#"
+  },
+  {
+    id: "trakant",
+    title: "Trakant",
+    desc: "Site web moderne pour une entreprise de logistique, axé sur la performance et la simplicité d'utilisation.",
+    imgUrl: "/images/portfolio-trakant.jpg",
+    url: "#"
   }
 ];
 
@@ -158,6 +198,10 @@ export const faqs = [
   {
     question: "Puis-je modifier le contenu moi-même une fois le site en ligne ?",
     answer: "Oui, si nous intégrons un CMS (Système de Gestion de Contenu). Nous vous formerons pour que vous puissiez mettre à jour vos textes et images facilement."
+  },
+  {
+    question: "Proposez-vous un service de maintenance après la livraison ?",
+    answer: "Oui ! Nous offrons un forfait Service Après-Vente à 1200$/an qui inclut la maintenance continue, les mises à jour de sécurité, le support technique prioritaire et un monitoring 24/7 pour assurer la pérennité de votre site."
   }
 ];
 
