@@ -16,25 +16,31 @@ const ThemeToggle = ({ theme, setTheme, mounted }) => {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={`relative w-[56px] h-[28px] rounded-full transition-colors duration-300 flex items-center px-[3px] ${
-        isDark ? "bg-[#25618B]" : "bg-[#d1d5db]"
+      className={`relative w-[56px] h-[28px] rounded-full transition-colors duration-300 flex items-center px-[3px] shadow-inner ${
+        isDark ? "bg-[#1E293B]" : "bg-[#CBD5E1]"
       }`}
       aria-label="Toggle Dark Mode"
     >
       {/* Sun icon */}
-      <span className={`absolute left-[7px] transition-all duration-300 ${isDark ? "opacity-0 scale-50" : "opacity-100 scale-100"}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <span className="absolute left-[8px] z-0 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isDark ? "#94A3B8" : "#EAB308"} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="transition-colors duration-300"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
       </span>
       {/* Moon icon */}
-      <span className={`absolute right-[7px] transition-all duration-300 ${isDark ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span className="absolute right-[8px] z-0 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke={isDark ? "white" : "#64748B"} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="transition-colors duration-300"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </span>
       {/* Slider */}
       <motion.div
         layout
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
-        className={`w-[22px] h-[22px] rounded-full bg-white shadow-md z-10 ${isDark ? "ml-auto" : "mr-auto"}`}
-      />
+        className={`w-[22px] h-[22px] rounded-full bg-white shadow-md z-10 flex items-center justify-center ${isDark ? "ml-auto" : "mr-auto"}`}
+      >
+        {isDark ? (
+           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="#1E293B" stroke="#1E293B" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="#EAB308" stroke="#EAB308" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        )}
+      </motion.div>
     </button>
   );
 };
