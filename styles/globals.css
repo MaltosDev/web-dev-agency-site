@@ -94,8 +94,9 @@ html {
   height: 316px;
   left: 0px;
   top: 0px;
+  z-index: -1;
 
-  background: #8d39a3;
+  background: #25618b;
   filter: blur(175px);
 }
 
