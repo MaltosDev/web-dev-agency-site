@@ -5,9 +5,12 @@ import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
 import { TypingText, ExploreCard, TitleText } from "../components";
 import { exploreWorlds } from "../constants";
+import { useLanguage } from "../context/LanguageContext";
 
 const Explore = () => {
   const [activeCard, setActiveCard] = useState("world-2");
+  const { t } = useLanguage();
+
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
@@ -17,12 +20,11 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="| Nos Services" textStyles="text-center" />
+        <TypingText title={`| ${t("explore.title")}`} textStyles="text-center" />
         <TitleText
           title={
             <>
-              Choisissez le service dont vous avez <br className="md:block hidden" /> besoin
-              pour développer votre entreprise{" "}
+              {t("explore.heading")}{" "}
             </>
           }
           textStyles="text-center"
@@ -32,6 +34,7 @@ const Explore = () => {
             <ExploreCard
               key={world.id}
               {...world}
+              title={t("exploreData")[index]} // Use translated title
               index={index}
               active={activeCard}
               handleClick={setActiveCard}

@@ -6,8 +6,12 @@ import styles from "../styles";
 import { slideIn, staggerContainer, textVariant } from "../utils/motion";
 import stamp from "../public/stamp.png";
 import cover from "../public/cover.png";
+import { useLanguage } from "../context/LanguageContext";
 
-const Hero = () => (
+const Hero = () => {
+  const { t } = useLanguage();
+  
+  return (
   <section className={`${styles.yPaddings} sm:pl-16 pl-6 pt-[120px]`}>
     {/* this is a container div in which we can animate children elements */}
     <motion.div
@@ -19,16 +23,13 @@ const Hero = () => (
     >
       <div className="flex justify-center items-center flex-col relative z-10">
         <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
-          Maltos
+          {t("hero.titleLine1")}
         </motion.h1>
         <motion.div
           variants={textVariant(1.2)}
           className="flex flex-row justify-center items-center"
         >
-          <h1 className={styles.heroHeading}>Web </h1>
-          <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}>ev</h1>
-          <h1 className={styles.heroHeading}>&nbsp;</h1>
+          <h1 className={styles.heroHeading}>{t("hero.titleLine2")}</h1>
         </motion.div>
       </div>
 
@@ -60,6 +61,7 @@ const Hero = () => (
       </motion.div>
     </motion.div>
   </section>
-);
+  );
+};
 
 export default Hero;

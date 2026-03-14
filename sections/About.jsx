@@ -4,8 +4,12 @@ import { TypingText } from "../components";
 import styles from "../styles";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import arrowDown from "../public/arrow-down.svg";
+import { useLanguage } from "../context/LanguageContext";
 
-const About = () => (
+const About = () => {
+  const { t } = useLanguage();
+
+  return (
   <section className={`${styles.paddings} relative z-10`} id="about">
     <div className="gradient-02 z-0" />
     <motion.div
@@ -15,28 +19,13 @@ const About = () => (
       viewport={{ once: false, amount: 0.15 }}
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
-      <TypingText title="| Qui sommes-nous" textStyles="text-center" />
+      <TypingText title={`| ${t("about.heading")}`} textStyles="text-center" />
 
       <motion.p
         variants={fadeIn("up", "tween", 0.2, 0.8)}
         className="mt-[10px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-text dark:text-secondary-white"
-      >
-        <span className="font-extrabold text-primary-text dark:text-white">Nous sommes</span> une
-        équipe d'etudiants passionnée dans la recherche technologique et le développement web.
-        Nous développons des sites web pour nous faire de l'experience professionelle et aider les commerces et les entreprises a atteindre <span className="font-extrabold text-primary-text dark:text-white">plus de clients</span>.
-        Que vous ayez besoin d'un
-        simple site de présentation ou d'une{" "}
-        <span className="font-extrabold text-primary-text dark:text-white">
-          {" "}
-          application web sur mesure{" "}
-        </span>
-        {", "}
-        nos services sont conçues pour{" "}
-        <span className="font-extrabold text-primary-text dark:text-white"> accélérer </span> votre
-        croissance et transformer vos visiteurs en clients fidèles.{" "}
-        <span className="font-extrabold text-primary-text dark:text-white">Découvrez</span> comment
-        nous pouvons donner vie à <span className="font-extrabold text-primary-text dark:text-white">votre vision</span>.
-      </motion.p>
+        dangerouslySetInnerHTML={{ __html: t("about.description") }}
+      />
       <a href="#team">
         <motion.img
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -47,6 +36,7 @@ const About = () => (
       </a>
     </motion.div>
   </section>
-);
+  );
+};
 
 export default About;

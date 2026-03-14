@@ -76,12 +76,17 @@ const PricingCard = ({ id, title, price, features, buttonText, index }) => {
         </ul>
       </div>
 
-      <button
-        type="button"
-        className="relative z-10 w-full py-4 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[16px] text-white hover:bg-opacity-80 transition-all duration-300"
+      <a
+        href="#contact"
+        className="relative z-10 w-full"
       >
-        {buttonText}
-      </button>
+        <button
+          type="button"
+          className="w-full py-4 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[16px] text-white hover:bg-opacity-80 transition-all duration-300"
+        >
+          {buttonText}
+        </button>
+      </a>
     </motion.div>
   );
 };

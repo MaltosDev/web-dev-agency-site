@@ -5,33 +5,40 @@ import styles from "../styles";
 import { staggerContainer } from "../utils/motion";
 import { TypingText, TitleText, InsightCard } from "../components";
 import { insights } from "../constants";
+import { useLanguage } from "../context/LanguageContext";
 
-const Insights = () => (
-  <section className={`${styles.paddings} relative z-10`}>
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex flex-col `}
-    >
-      <TypingText title="| Études de cas" textStyles="text-center" />
-      <TitleText
-        title={<>Découvrez les résultats d'avoir un site Web</>}
-        textStyles="text-center"
-      />
+const Insights = () => {
+  const { t } = useLanguage();
 
-      <div className="mt-[50px] flex flex-col gap-[30px] ">
-        {insights.map((insight, index) => (
-          <InsightCard
-            key={`insight-${index}`}
-            {...insight}
-            index={index + 1}
-          />
-        ))}
-      </div>
-    </motion.div>
-  </section>
-);
+  return (
+    <section className={`${styles.paddings} relative z-10`}>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`${styles.innerWidth} mx-auto flex flex-col `}
+      >
+        <TypingText title={`| ${t("insights.title")}`} textStyles="text-center" />
+        <TitleText
+          title={<>{t("insights.heading")}</>}
+          textStyles="text-center"
+        />
+
+        <div className="mt-[50px] flex flex-col gap-[30px] ">
+          {insights.map((insight, index) => (
+            <InsightCard
+              key={`insight-${index}`}
+              {...insight}
+              title={t("insights.items")[index].title}
+              subtitle={t("insights.items")[index].subtitle}
+              index={index + 1}
+            />
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
+};
 
 export default Insights;

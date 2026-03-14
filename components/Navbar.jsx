@@ -5,14 +5,8 @@ import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
+import { useLanguage } from "../context/LanguageContext";
 
-const navLinks = [
-  { name: "À propos", href: "#about" },
-  { name: "Services", href: "#explore" },
-  { name: "Tarifs", href: "#pricing" },
-  { name: "Équipe", href: "#team" },
-  { name: "FAQ", href: "#faq" },
-];
 
 const ThemeToggle = ({ theme, setTheme, mounted }) => {
   if (!mounted) return <div className="w-[56px] h-[28px]" />;
@@ -49,10 +43,19 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const navLinks = [
+    { name: t("navbar.about"), href: "#about" },
+    { name: t("navbar.services"), href: "#explore" },
+    { name: t("navbar.pricing"), href: "#pricing" },
+    { name: t("navbar.team"), href: "#team" },
+    { name: t("navbar.faq"), href: "#faq" },
+  ];
 
   return (
     <nav className={`${styles.xPaddings} py-8 fixed w-full top-0 z-50 bg-primary-bg/80 dark:bg-primary-black/80 backdrop-blur-md transition-all`}>
@@ -86,7 +89,7 @@ const Navbar = () => {
             href="#contact"
             className="py-2 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[14px] text-white hover:bg-opacity-80 transition-all duration-300"
           >
-            Contact
+            {t("navbar.contact")}
           </a>
         </div>
 
@@ -120,7 +123,7 @@ const Navbar = () => {
             </a>
           ))}
           <div className="flex items-center gap-3 py-2">
-            <span className="text-[14px] text-secondary-text dark:text-secondary-white">Thème</span>
+            <span className="text-[14px] text-secondary-text dark:text-secondary-white">{t("navbar.theme")}</span>
             <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
           </div>
           <a
@@ -128,7 +131,7 @@ const Navbar = () => {
             onClick={() => setMenuOpen(false)}
             className="py-3 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[16px] text-white text-center hover:bg-opacity-80 transition-all duration-300"
           >
-            Contact
+            {t("navbar.contact")}
           </a>
         </motion.div>
       )}

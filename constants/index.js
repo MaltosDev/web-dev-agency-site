@@ -4,8 +4,8 @@ import Planet_2 from "../public/images/robotix.jpg";
 import Planet_6 from "../public/bdc1.png";
 import Planet_7 from "../public/hec2.svg";
 import Planet_8 from "../public/col3.png";
-import vrpano from "../public/vrpano.svg";
-import headset from "../public/headset.svg";
+import rocket from "../public/rocket.svg";
+import monitor from "../public/monitor.svg";
 import twitter from "../public/twitter.svg";
 import linkedin from "../public/linkedin.svg";
 import instagram from "../public/instagram.svg";
@@ -40,16 +40,10 @@ export const startingFeatures = [
 
 export const newFeatures = [
   {
-    imgUrl: vrpano,
-    title: "Ultra Rapide",
-    subtitle:
-      "Nos sites sont optimisés pour la vitesse, garantissant haute performance et meilleure expérience utilisateur.",
+    imgUrl: rocket,
   },
   {
-    imgUrl: headset,
-    title: "Design Unique",
-    subtitle:
-      "Des designs uniques et modernes qui attirent l'attention, convertissent les visiteurs et se démarquent de la concurrence.",
+    imgUrl: monitor,
   },
 ];
 
