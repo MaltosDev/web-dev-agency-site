@@ -99,7 +99,7 @@ const Contact = () => {
                 Email
               </h4>
               <p className="mt-[8px] font-normal sm:text-[16px] text-[14px] text-secondary-text dark:text-secondary-white">
-                contact@maltos.dev
+                maltos.can@gmail.com
               </p>
             </div>
             <div>
@@ -107,7 +107,7 @@ const Contact = () => {
                 Téléphone
               </h4>
               <p className="mt-[8px] font-normal sm:text-[16px] text-[14px] text-secondary-text dark:text-secondary-white">
-                +1 514 824 0732 RANDOM NUMEROT A CHANGER
+                +1 438 521 1040
               </p>
             </div>
           </motion.div>
