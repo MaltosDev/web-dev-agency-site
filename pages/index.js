@@ -15,7 +15,7 @@ import {
 } from "../sections";
 
 const Home = () => (
-  <div className="bg-primary-black">
+  <div className="bg-primary-black overflow-clip">
     <Navbar />
     <Hero />
     <div className="relative">
