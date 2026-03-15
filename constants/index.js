@@ -89,6 +89,9 @@ export const pricingPlans = [
       "Landing Page moderne",
       "Design Responsive",
       "Formulaire de contact",
+      "Liaison Réseaux sociaux",
+      "1 Adresse courriel pro",
+      "Certificat de sécurité SSL",
       "Optimisation SEO de base",
       "Hébergement 1 an inclus"
     ],
@@ -104,6 +107,10 @@ export const pricingPlans = [
       "Design Responsive",
       "Architecture avec base de donnée (backend)",
       "Interface de gestion (dashboard administrateur)",
+      "Liaison Réseaux sociaux",
+      "5 Adresses courriel pro",
+      "Certificat de sécurité SSL",
+      "Configuration Google My Business & Maps",
       "Optimisation SEO avancée",
       "Hébergement 1 an inclus",
       "3 mois de maintenance inclus"
