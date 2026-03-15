@@ -63,7 +63,7 @@ export const insights = [
     title: "L'importance d'un design responsive en 2026",
     subtitle:
       "Avec plus de 60% du trafic web provenant des mobiles, découvrez comment l'adaptation fluide de votre site impacte directement vos conversions et votre SEO.",
-    url: "https://www.forbes.com/sites/forbesagencycouncil/2017/02/03/the-importance-of-a-mobile-friendly-website/"
+    url: "https://www.bdc.ca/fr/articles-outils/technologie/internet/pourquoi-votre-site-web-doit-etre-adaptatif"
   },
   {
     imgUrl: Planet_7,
