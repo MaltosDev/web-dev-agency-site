@@ -2,8 +2,6 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "../context/LanguageContext";
 
-import SmoothScroll from "../components/SmoothScroll";
-
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => (
@@ -14,9 +12,7 @@ const MyApp = ({ Component, pageProps }) => (
       <link rel="preconnect" href="https://stijndv.com" />
     </Head>
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <SmoothScroll>
-        <Component {...pageProps} />
-      </SmoothScroll>
+      <Component {...pageProps} />
     </ThemeProvider>
   </LanguageProvider>
 );

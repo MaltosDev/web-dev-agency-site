@@ -6,7 +6,34 @@ import { motion } from "framer-motion";
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
 import { useLanguage } from "../context/LanguageContext";
+import Image from "next/image";
 
+const LanguageSwitcher = ({ currentLang, changeLanguage, isDark }) => {
+  return (
+    <div className="flex items-center gap-1 bg-[#CBD5E1]/20 dark:bg-[#1E293B]/40 p-[2px] rounded-full border border-gray-300 dark:border-gray-700">
+      <button
+        onClick={() => changeLanguage("fr")}
+        className={`px-2 py-1 rounded-full text-[12px] transition-all ${
+          currentLang === "fr" 
+            ? "bg-white dark:bg-[#25618B] text-primary-text dark:text-white shadow-sm" 
+            : "text-secondary-text dark:text-secondary-white hover:bg-gray-200 dark:hover:bg-gray-800"
+        }`}
+      >
+        FR
+      </button>
+      <button
+        onClick={() => changeLanguage("en")}
+        className={`px-2 py-1 rounded-full text-[12px] transition-all ${
+          currentLang === "en" 
+            ? "bg-white dark:bg-[#25618B] text-primary-text dark:text-white shadow-sm" 
+            : "text-secondary-text dark:text-secondary-white hover:bg-gray-200 dark:hover:bg-gray-800"
+        }`}
+      >
+        EN
+      </button>
+    </div>
+  );
+};
 
 const ThemeToggle = ({ theme, setTheme, mounted }) => {
   if (!mounted) return <div className="w-[56px] h-[28px]" />;
@@ -49,7 +76,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const { t } = useLanguage();
+  const { t, changeLanguage, language } = useLanguage();
 
   useEffect(() => {
     setMounted(true);
@@ -75,8 +102,17 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 80, delay: 0.5 }}
         className={`${styles.innerWidth} mx-auto flex justify-between items-center gap-8`}
       >
-        <a href="#" className="font-extrabold text-[24px] leading-[30px] text-primary-text dark:text-white uppercase">
-          MALTOS DEV
+        <a href="#" className="flex items-center gap-2">
+          <Image 
+            src="/maltos_logo_transparent.png" 
+            alt="Maltos Dev Logo" 
+            width={60} 
+            height={60} 
+            className="object-contain"
+          />
+          <span className="font-extrabold text-[28px] leading-[34px] text-primary-text dark:text-white uppercase hidden sm:block">
+            Maltos Dev
+          </span>
         </a>
 
         {/* Desktop Nav */}
@@ -90,7 +126,14 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
+          <div className="flex items-center gap-4">
+            <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
+            <LanguageSwitcher 
+              currentLang={language} 
+              changeLanguage={changeLanguage} 
+              isDark={theme === "dark"} 
+            />
+          </div>
           <a
             href="#contact"
             className="py-2 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[14px] text-white hover:bg-opacity-80 transition-all duration-300"
@@ -128,9 +171,16 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <div className="flex items-center gap-3 py-2">
-            <span className="text-[14px] text-secondary-text dark:text-secondary-white">{t("navbar.theme")}</span>
-            <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
+          <div className="flex items-center justify-between py-2 border-t border-gray-200 dark:border-gray-800 mt-2 pt-4">
+            <div className="flex items-center gap-3">
+              <span className="text-[14px] text-secondary-text dark:text-secondary-white">{t("navbar.theme")}</span>
+              <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
+            </div>
+            <LanguageSwitcher 
+              currentLang={language} 
+              changeLanguage={changeLanguage} 
+              isDark={theme === "dark"} 
+            />
           </div>
           <a
             href="#contact"

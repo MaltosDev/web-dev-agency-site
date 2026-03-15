@@ -60,28 +60,31 @@ export const newFeatures = [
 export const insights = [
   {
     imgUrl: Planet_6,
-    title: "Pourquoi un design responsive est crucial en 2026",
+    title: "L'importance d'un design responsive en 2026",
     subtitle:
       "Avec plus de 60% du trafic web provenant des mobiles, découvrez comment l'adaptation fluide de votre site impacte directement vos conversions et votre SEO.",
+    url: "https://www.forbes.com/sites/forbesagencycouncil/2017/02/03/the-importance-of-a-mobile-friendly-website/"
   },
   {
     imgUrl: Planet_7,
-    title: "Optimiser les performances de votre site Next.js",
+    title: "Pourquoi le SEO est crucial pour votre business",
     subtitle:
-      "La vitesse de chargement est le premier critère de rétention. Apprenez les meilleures pratiques pour offrir une expérience instantanée à vos utilisateurs.",
+      "La vitesse de chargement et le référencement sont les clés de la rétention. Apprenez les meilleures pratiques pour offrir une expérience instantanée.",
+    url: "https://digital.hec.ca/blog/pourquoi-le-seo-est-important/"
   },
   {
     imgUrl: Planet_8,
-    title: "L'importance de l'accessibilité web moderne",
+    title: "Comment un site web renforce la confiance",
     subtitle:
-      "Rendre votre site accessible à tous n'est plus une option. Découvrez comment un design inclusif améliore l'expérience globale et la portée de votre marque.",
+      "Un site professionnel est bien plus qu'une vitrine : c'est le socle de votre crédibilité numérique et de votre sérieux.",
+    url: "https://collaborsimpact.com/2026/01/17/comment-un-site-web-renforce-la-confiance-de-vos-clients/"
   },
 ];
 
 export const pricingPlans = [
   {
     id: "basic",
-    title: "Site Régulier",
+    title: "Offre Essentielle",
     price: "800$",
     features: [
       "Landing Page moderne",
@@ -94,12 +97,14 @@ export const pricingPlans = [
   },
   {
     id: "pro",
-    title: "Site Pro",
+    title: "Offre Premium",
     price: "1500$",
     features: [
       "Site moderne jusqu'à 10 pages",
       "Fonctionalités sur mesure",
       "Design Responsive",
+      "Architecture avec base de donnée (backend)",
+      "Interface de gestion (dashboard administrateur)",
       "Optimisation SEO avancée",
       "Hébergement 1 an inclus",
       "3 mois de maintenance inclus"

@@ -61,7 +61,7 @@ const translations = {
       maintenanceBanner: "💡 <strong>Proposé à la fin de chaque contrat</strong> — Notre forfait Service Après-Vente assure la pérennité de votre site avec un maintien continu, des mises à jour de sécurité et un support prioritaire.",
       plans: [
         {
-          title: "Site Régulier",
+          title: "Offre Essentielle",
           price: "800$",
           features: [
             "Landing Page moderne",
@@ -73,12 +73,14 @@ const translations = {
           buttonText: "Commencer"
         },
         {
-          title: "Site Pro",
+          title: "Offre Premium",
           price: "1500$",
           features: [
             "Site moderne jusqu'à 10 pages",
             "Fonctionalités sur mesure",
             "Design Responsive",
+            "Architecture avec base de donnée (backend)",
+            "Interface de gestion (dashboard administrateur)",
             "Optimisation SEO avancée",
             "Hébergement 1 an inclus",
             "3 mois de maintenance inclus"
@@ -115,6 +117,7 @@ const translations = {
     team: {
       title: "Notre Équipe",
       heading: "Les experts derrière Maltos",
+      viewPortfolio: "Voir le portfolio",
       members: [
         {
           role: "Développeur Frontend",
@@ -154,16 +157,16 @@ const translations = {
       readMore: "Lire l'article",
       items: [
         {
-          title: "Pourquoi un design responsive est crucial en 2026",
+          title: "L'importance d'un design responsive en 2026",
           subtitle: "Avec plus de 60% du trafic web provenant des mobiles, découvrez comment l'adaptation fluide de votre site impacte directement vos conversions."
         },
         {
-          title: "Optimiser les performances de votre site Next.js",
-          subtitle: "La vitesse de chargement est le premier critère de rétention. Apprenez les meilleures pratiques pour offrir une expérience instantanée."
+          title: "Pourquoi le SEO est crucial pour votre business",
+          subtitle: "Apprenez comment un bon référencement propulse votre entreprise devant vos concurrents sur Google."
         },
         {
-          title: "L'importance de l'accessibilité web moderne",
-          subtitle: "Rendre votre site accessible à tous n'est plus une option. Découvrez comment un design inclusif améliore l'expérience globale."
+          title: "Comment un site web renforce la confiance",
+          subtitle: "Un site professionnel est bien plus qu'une vitrine : c'est le socle de votre crédibilité numérique."
         }
       ]
     },
@@ -193,11 +196,6 @@ const translations = {
         }
       ]
     },
-    exploreData: [
-      "Floragel",
-      "StanRbotix",
-      "Trakant"
-    ],
     world: {
       title: "Présence Mondiale",
       heading: "Nous avons aidé des petites entreprises dans le monde entier à atteindre leurs objectifs numériques"
@@ -252,8 +250,8 @@ const translations = {
       theme: "Theme"
     },
     hero: {
-      titleLine1: "The Future of Web",
-      titleLine2: "Is Here",
+      titleLine1: "The Future Of",
+      titleLine2: "Web Is Here",
       subtitle: "Building bold digital experiences with Maltos"
     },
     about: {
@@ -299,7 +297,7 @@ const translations = {
       maintenanceBanner: "💡 <strong>Offered at the end of each contract</strong> — Our After-Sales Service package ensures the longevity of your site with continuous maintenance, security updates, and priority support.",
       plans: [
         {
-          title: "Regular Site",
+          title: "Essential Offer",
           price: "800$",
           features: [
             "Modern Landing Page",
@@ -311,12 +309,14 @@ const translations = {
           buttonText: "Start"
         },
         {
-          title: "Pro Site",
+          title: "Premium Offer",
           price: "1500$",
           features: [
             "Modern site up to 10 pages",
             "Custom features",
             "Responsive Design",
+            "Database architecture (backend)",
+            "Management interface (admin dashboard)",
             "Advanced SEO Optimization",
             "1 year hosting included",
             "3 months maintenance included"
@@ -353,6 +353,7 @@ const translations = {
     team: {
       title: "Our Team",
       heading: "The experts behind Maltos",
+      viewPortfolio: "View portfolio",
       members: [
         {
           role: "Frontend Developer",
@@ -392,16 +393,16 @@ const translations = {
       readMore: "Read article",
       items: [
         {
-          title: "Why responsive design is crucial in 2026",
-          subtitle: "With more than 60% of web traffic coming from mobile, find out how fluid adaptation of your site directly impacts your conversions."
+          title: "The importance of a mobile-friendly site",
+          subtitle: "Discover why mobile adaptation is the number 1 success factor for your online presence today."
         },
         {
-          title: "Optimize the performance of your Next.js site",
-          subtitle: "Loading speed is the number one retention criterion. Learn the best practices for providing an instant experience to your users."
+          title: "Why SEO is crucial for your business",
+          subtitle: "Learn how good SEO propels your business ahead of your competitors on Google."
         },
         {
-          title: "The importance of modern web accessibility",
-          subtitle: "Making your site accessible to all is no longer an option. Find out how inclusive design improves overall experience and brand reach."
+          title: "How a website builds trust",
+          subtitle: "A professional website is much more than a showcase: it's the foundation of your digital credibility."
         }
       ]
     },
@@ -431,11 +432,6 @@ const translations = {
         }
       ]
     },
-    exploreData: [
-      "Floragel",
-      "StanRbotix",
-      "Trakant"
-    ],
     world: {
       title: "Global Presence",
       heading: "We have helped small businesses around the world reach their digital goals"

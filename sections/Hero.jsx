@@ -12,7 +12,10 @@ const Hero = () => {
   const { t } = useLanguage();
   
   return (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6 pt-[120px]`}>
+  <section 
+    className={`${styles.yPaddings} sm:pl-16 pl-6`} 
+    style={{ paddingTop: '180px' }}
+  >
     {/* this is a container div in which we can animate children elements */}
     <motion.div
       variants={staggerContainer}
@@ -21,16 +24,13 @@ const Hero = () => {
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
-      <div className="flex justify-center items-center flex-col relative z-10">
-        <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
+      <div className="flex justify-center flex-col relative z-10 w-full">
+        <motion.h1 variants={textVariant(1.1)} className={`${styles.heroHeading} text-center`}>
           {t("hero.titleLine1")}
         </motion.h1>
-        <motion.div
-          variants={textVariant(1.2)}
-          className="flex flex-row justify-center items-center"
-        >
-          <h1 className={styles.heroHeading}>{t("hero.titleLine2")}</h1>
-        </motion.div>
+        <motion.h1 variants={textVariant(1.2)} className={`${styles.heroHeading} text-center`}>
+          {t("hero.titleLine2")}
+        </motion.h1>
       </div>
 
       {/* NOTE "-mt-[20px]" means "minus 20px margin top" */}

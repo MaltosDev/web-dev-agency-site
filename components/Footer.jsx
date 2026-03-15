@@ -34,17 +34,6 @@ const Footer = () => {
               <p className="font-normal text-[14px] text-primary-text dark:text-white opacity-50 text-center sm:text-left">
                 {t("footer.copyright")}
               </p>
-
-              <div className="flex gap-4">
-                {socials.map((social) => (
-                  <Image
-                    key={social.name}
-                    src={social.url}
-                    alt={social.name}
-                    className="w-[24px] h-[24px] object-contain cursor-pointer dark:invert"
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>
