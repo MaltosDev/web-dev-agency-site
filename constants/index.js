@@ -62,7 +62,7 @@ export const insights = [
     imgUrl: Planet_6,
     title: "5 raisons pour lesquelles votre entreprise doit avoir un bon site Web",
     subtitle: "Même si votre entreprise n’effectue aucune vente en ligne, il lui faut absolument un bon site Web pour tirer son épingle du jeu sur le marché actuel. C’est souvent en visitant un site Web que la clientèle potentielle se renseigne au sujet d’une entreprise. Il peut vous aider à faire face aux fluctuations inévitables du marché.",
-    url: "https://www.bdc.ca/fr/articles-outils/technologie/internet/pourquoi-votre-entreprise-doit-avoir-un-site-web"
+    url: "https://www.bdc.ca/en/articles-tools/technology/create-website/5-reasons-your-business-needs-a-good-website"
   },
   {
     imgUrl: Planet_7,
