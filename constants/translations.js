@@ -136,8 +136,8 @@ const translations = {
         btnText: "Visiter le site"
       },
       {
-        title: "StanRobotix",
-        description: "Site officiel de l'équipe de robotique FRC StanRobotix 6622. Une plateforme immersive pour suivre l'actualité de l'équipe, ses compétitions FRC, découvrir les innovations techniques. Ce site n'as pas totalement été fait par notre équipe, mais nous nous sommes chargé de la page d'acueil et la page de outreach",
+        title: "Exemple de site informatif (SNT-2nd2)",
+        description: "Ceci est un exemple de site informatif que nous pouvons réaliser. Il est actuellement déployé en tant que projet de démonstration.",
         btnText: "Visiter le site"
       },
       {
@@ -372,8 +372,8 @@ const translations = {
         btnText: "Visit the site"
       },
       {
-        title: "StanRobotix",
-        description: "Official website of the StanRobotix 6622 FRC robotics team. An immersive platform to follow the team's news, FRC competitions, and discover technical innovations. This website was not entirely made by our team, but we made the home page and outreach page.",
+        title: "Informative Website Example (SNT-2nd2)",
+        description: "This is an example of an informative website that we can create. It is currently deployed as a demonstration project.",
         btnText: "Visit the site"
       },
       {

@@ -26,10 +26,10 @@ export const exploreWorlds = [
   {
     id: "world-2",
     imgUrl: Planet_2,
-    title: "StanRbotix",
-    description: "Site officiel de l'équipe de robotique FRC StanRbotix 6622. Une plateforme immersive pour suivre l'actualité de l'équipe, ses compétitions FRC, découvrir les innovations techniques et l'engagement de l'équipe.",
-    stack: ["Vue.js", "CSS", "HTML"],
-    url: "https://www.stanrobotix6622.com/"
+    title: "Exemple de site informatif (SNT-2nd2)",
+    description: "Ceci est un exemple de site informatif que nous pouvons réaliser. Il est actuellement déployé en tant que projet de démonstration.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    url: "https://maltosdev.github.io/snt-2nd2/"
   },
   {
     id: "world-3",
