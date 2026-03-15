@@ -104,7 +104,7 @@ const Navbar = () => {
       >
         <a href="#" className="flex items-center gap-2">
           <Image 
-            src="/maltos_logo_transparent.png" 
+            src={mounted && theme === "dark" ? "/maltos_logo_clair.png" : "/maltos_logo_transparent.png"} 
             alt="Maltos Dev Logo" 
             width={60} 
             height={60} 
