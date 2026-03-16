@@ -76,7 +76,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const { t, changeLanguage, language } = useLanguage();
+  const { t, changeLanguage, currentLang } = useLanguage();
 
   useEffect(() => {
     setMounted(true);
@@ -129,7 +129,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
             <LanguageSwitcher 
-              currentLang={language} 
+              currentLang={currentLang} 
               changeLanguage={changeLanguage} 
               isDark={theme === "dark"} 
             />
@@ -177,7 +177,7 @@ const Navbar = () => {
               <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
             </div>
             <LanguageSwitcher 
-              currentLang={language} 
+              currentLang={currentLang} 
               changeLanguage={changeLanguage} 
               isDark={theme === "dark"} 
             />

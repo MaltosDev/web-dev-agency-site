@@ -11,7 +11,7 @@ const Pricing = () => {
   const { t } = useLanguage();
 
   return (
-    <section className={`${styles.paddings} relative z-10`} id="pricing">
+    <section className={`${styles.paddings} relative z-10 scroll-mt-24`} id="pricing">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

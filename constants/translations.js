@@ -57,7 +57,7 @@ const translations = {
     },
     pricing: {
       title: "Nos Tarifs",
-      heading: "Des solutions adaptées à chaque besoin",
+      heading: "Des solutions adaptées à chaque besoin — 🎁 Promo Exceptionnelle de 25%",
       maintenanceBanner: "💡 <strong>Proposé à la fin de chaque contrat</strong> — Notre forfait Service Après-Vente assure la pérennité de votre site avec un maintien continu, des mises à jour de sécurité et un support prioritaire.",
       plans: [
         {
@@ -293,7 +293,7 @@ const translations = {
     },
     pricing: {
       title: "Our Pricing",
-      heading: "Solutions adapted to every need",
+      heading: "Solutions adapted to every need — 🎁 Exceptional 25% Promo",
       maintenanceBanner: "💡 <strong>Offered at the end of each contract</strong> — Our After-Sales Service package ensures the longevity of your site with continuous maintenance, security updates, and priority support.",
       plans: [
         {
