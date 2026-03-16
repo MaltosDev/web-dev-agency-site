@@ -37,7 +37,7 @@ const PricingCard = ({ id, title, price, features, buttonText, index }) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform, transition: transform ? "transform 0.1s ease-out" : "transform 0.5s ease-out" }}
-      className="pricing-card-3d flex-1 flex flex-col justify-between p-6 sm:p-8 rounded-[32px] border-[1px] border-[#d1d5db] dark:border-[#6a6a6a] bg-white/50 dark:bg-white/5 relative z-10 overflow-hidden min-w-[300px] sm:min-w-[400px]"
+      className="pricing-card-3d flex-1 flex flex-col justify-between p-6 sm:p-8 rounded-[32px] border-[1px] border-[#d1d5db] dark:border-[#6a6a6a] bg-white/50 dark:bg-white/5 relative z-10 overflow-hidden min-w-[300px] sm:min-w-[300px]"
     >
       {/* Glow follow cursor */}
       <div

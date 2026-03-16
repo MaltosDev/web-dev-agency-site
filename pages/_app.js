@@ -8,9 +8,9 @@ const MyApp = ({ Component, pageProps }) => (
   <LanguageProvider>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" type="image/png" href="/maltos_logo_clair.png?v=2" />
-      <link rel="shortcut icon" href="/maltos_logo_clair.png?v=2" />
-      <link rel="apple-touch-icon" href="/maltos_logo_clair.png?v=2" />
+      <link rel="icon" type="image/x-icon" href="/maltos_logo.ico?v=3" />
+      <link rel="shortcut icon" href="/maltos_logo.ico?v=3" />
+      <link rel="apple-touch-icon" href="/maltos_logo.ico?v=3" />
       <link rel="preconnect" href="https://stijndv.com" />
     </Head>
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
