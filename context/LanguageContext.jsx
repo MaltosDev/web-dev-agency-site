@@ -7,6 +7,7 @@ export const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [currentLang, setCurrentLang] = useState("fr"); // Default fallback
   const [showModal, setShowModal] = useState(false);
+  const [hasResolved, setHasResolved] = useState(false);
 
   useEffect(() => {
     const savedLang = localStorage.getItem("maltos_lang");
