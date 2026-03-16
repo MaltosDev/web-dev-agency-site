@@ -3,15 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const LanguageModal = () => {
-  const { changeLanguage, hasResolved } = useLanguage();
+  const { changeLanguage, hasResolved, showModal } = useLanguage();
 
-  // If we haven't checked localStorage yet, don't show anything to avoid Hydration errors
-  if (!hasResolved) return null;
-
-  // If a language is already set in localStorage, don't show the modal
-  if (typeof window !== "undefined" && localStorage.getItem("maltos_lang")) {
-    return null;
-  }
+  // If we haven't checked localStorage yet or modal shouldn't be shown
+  if (!hasResolved || !showModal) return null;
 
   const handleSelect = (lang) => {
     changeLanguage(lang);

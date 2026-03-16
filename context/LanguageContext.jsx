@@ -6,13 +6,15 @@ export const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [currentLang, setCurrentLang] = useState("fr"); // Default fallback
-  const [hasResolved, setHasResolved] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const savedLang = localStorage.getItem("maltos_lang");
-    // If the user has visited before and saved a language
     if (savedLang && (savedLang === "fr" || savedLang === "en")) {
       setCurrentLang(savedLang);
+      setShowModal(false);
+    } else {
+      setShowModal(true);
     }
     setHasResolved(true);
   }, []);
@@ -20,6 +22,7 @@ export const LanguageProvider = ({ children }) => {
   const changeLanguage = (lang) => {
     setCurrentLang(lang);
     localStorage.setItem("maltos_lang", lang);
+    setShowModal(false);
   };
 
   // Helper function to get nested keys like "hero.title"
@@ -38,7 +41,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ currentLang, changeLanguage, t, hasResolved }}>
+    <LanguageContext.Provider value={{ currentLang, changeLanguage, t, hasResolved, showModal }}>
       {children}
     </LanguageContext.Provider>
   );
