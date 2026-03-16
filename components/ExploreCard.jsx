@@ -15,7 +15,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleHover, handleClic
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${active === id ? "lg:flex-[3.5] flex-[10] z-20" : "lg:flex-[0.5] flex-[2] z-10"
         } ${styles.flexCenter
-        } min-w-[170px] h-[600px] transition-[flex] duration-[0.6s] ease-out-flex cursor-pointer rounded-[32px] overflow-hidden group shadow-lg hover:shadow-2xl`}
+        } min-w-[170px] h-[450px] sm:h-[600px] transition-[flex] duration-[0.6s] ease-out-flex cursor-pointer rounded-[32px] overflow-hidden group shadow-lg hover:shadow-2xl`}
       onMouseEnter={() => handleHover && handleHover(id)}
       onClick={() => handleClick(id)}
     >

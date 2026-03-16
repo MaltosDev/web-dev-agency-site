@@ -13,8 +13,8 @@ const Hero = () => {
   
   return (
   <section 
-    className={`${styles.yPaddings} sm:pl-16 pl-6`} 
-    style={{ paddingTop: '180px' }}
+    className={`${styles.yPaddings} sm:pl-16 pl-4`} 
+    style={{ paddingTop: '150px' }}
   >
     {/* this is a container div in which we can animate children elements */}
     <motion.div
@@ -24,11 +24,11 @@ const Hero = () => {
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
-      <div className="flex justify-center flex-col relative z-10 w-full">
-        <motion.h1 variants={textVariant(1.1)} className={`${styles.heroHeading} text-center`}>
+      <div className="flex justify-center flex-col relative z-10 w-full px-4">
+        <motion.h1 variants={textVariant(1.1)} className={`${styles.heroHeading} text-center break-words`}>
           {t("hero.titleLine1")}
         </motion.h1>
-        <motion.h1 variants={textVariant(1.2)} className={`${styles.heroHeading} text-center`}>
+        <motion.h1 variants={textVariant(1.2)} className={`${styles.heroHeading} text-center break-words`}>
           {t("hero.titleLine2")}
         </motion.h1>
       </div>
@@ -36,25 +36,25 @@ const Hero = () => {
       {/* NOTE "-mt-[20px]" means "minus 20px margin top" */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 0.5)}
-        className="relative w-full md:-mt-[20px] -mt-[12px] "
+        className="relative w-full md:-mt-[20px] -mt-[10px] "
       >
-        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-10 -top-[30px]" />
+        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[100px] sm:rounded-tl-[140px] z-10 -top-[30px]" />
         <Image
           src={cover}
           alt="cover"
           placeholder="blur"
           priority
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative "
+          className="w-full sm:h-[500px] h-[300px] object-cover rounded-tl-[100px] sm:rounded-tl-[140px] z-10 relative "
         />
 
-        <a href="#about">
-          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10 ">
+        <a href="#about" className="relative z-10">
+          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[40px] pr-[20px] sm:pr-[40px]">
             <Image
               src={stamp}
               alt="stamp"
               placeholder="blur"
               priority
-              className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain "
+              className="sm:w-[155px] w-[80px] sm:h-[155px] h-[80px] object-contain "
             />
           </div>
         </a>

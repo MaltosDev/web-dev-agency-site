@@ -157,23 +157,25 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-primary-bg dark:bg-primary-black border-t border-[#d1d5db] dark:border-[#6a6a6a] p-6 flex flex-col gap-4 z-50"
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className="md:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-primary-black/95 backdrop-blur-lg border-b border-[#d1d5db] dark:border-[#6a6a6a] p-6 flex flex-col gap-4 z-50 shadow-xl overflow-hidden"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-medium text-[18px] text-secondary-text dark:text-secondary-white hover:text-primary-text dark:hover:text-white transition-colors duration-300"
+              className="font-medium text-[20px] py-2 text-secondary-text dark:text-secondary-white hover:text-primary-text dark:hover:text-white transition-colors duration-300"
             >
               {link.name}
             </a>
           ))}
-          <div className="flex items-center justify-between py-2 border-t border-gray-200 dark:border-gray-800 mt-2 pt-4">
+          <div className="flex items-center justify-between py-4 border-t border-gray-200 dark:border-gray-800 mt-2">
             <div className="flex items-center gap-3">
-              <span className="text-[14px] text-secondary-text dark:text-secondary-white">{t("navbar.theme")}</span>
+              <span className="text-[14px] text-secondary-text dark:text-secondary-white font-semibold">THEME</span>
               <ThemeToggle theme={theme} setTheme={setTheme} mounted={mounted} />
             </div>
             <LanguageSwitcher 
@@ -185,7 +187,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="py-3 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[16px] text-white text-center hover:bg-opacity-80 transition-all duration-300"
+            className="py-4 px-6 bg-accent-blue dark:bg-dark-accent rounded-[32px] font-bold text-[18px] text-white text-center hover:bg-opacity-80 transition-all duration-300 shadow-lg active:scale-95"
           >
             {t("navbar.contact")}
           </a>
